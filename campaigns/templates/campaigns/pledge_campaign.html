@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pledge to {{ campaign.title }}</title>
+</head>
+<body>
+    <h1>Pledge to {{ campaign.title }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Pledge</button>
+    </form>
+</body>
+</html>
